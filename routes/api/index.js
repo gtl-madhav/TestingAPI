@@ -1,6 +1,10 @@
 var router = require('express').Router();
-
+const test = require("../../controllers").test;
 router.use('/', require('./fileUpload'));
+
+router.get('/country', function (req, res, next) {
+  test.testFun(req, res, next);
+});
 
 router.use(function(err, req, res, next){
   if(err.name === 'ValidationError'){
