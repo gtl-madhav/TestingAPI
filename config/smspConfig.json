@@ -1,0 +1,29 @@
+{
+    "development": {
+        "privatekey": "7De52YgGC61s9vlP",
+        "privatedbkey": "2242f13856a1e8ad4471345dc78528a6",
+        "vectorkey": "8956892345689565",
+        "chrencode": "utf8",
+        "secretkey": "API_Secret_Key_PCA_App",
+        "tokenlifetime": 1440,
+        "resettokenlifetime": 1440
+    },
+    "staging": {
+        "privatekey": "7De52YgGC61s9vlP",
+        "privatedbkey": "2242f13856a1e8ad4471345dc78528a6",
+        "vectorkey": "8956892345689565",
+        "chrencode": "utf8",
+        "secretkey": "API_Secret_Key_PCA_App",
+        "tokenlifetime": 1440,
+        "resettokenlifetime": 1440
+    },
+    "production": {
+        "privatekey": "7De52YgGC61s9vlP",
+        "privatedbkey": "2242f13856a1e8ad4471345dc78528a6",
+        "vectorkey": "8956892345689565",
+        "chrencode": "utf8",
+        "secretkey": "API_Secret_Key_PCA_App",
+        "tokenlifetime": 1440,
+        "resettokenlifetime": 1440
+    }
+}
