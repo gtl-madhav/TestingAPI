@@ -48,6 +48,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 console.log("API is running!!");
+console.log("Port on -> API is running!!",process.env.PORT);
 
 app.use('/', indexRouter);
 
