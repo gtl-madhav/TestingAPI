@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('identity', {
+module.exports = function (sequelize, DataTypes) {
+  const identity = sequelize.define('identity', {
     id: {
       type: DataTypes.BIGINT,
       allowNull: false,
@@ -61,4 +61,15 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'identity'
   });
+
+  identity.associate = function (models) {
+    // associations can be defined here
+    // identity.belongsTo(models.generic_status, {
+    //   foreignKey: "status_id"
+    // });
+    identity.hasMany(models.entity_wing_relation, {
+      foreignKey: "identityId"
+    });
+  }
+  return identity;
 };

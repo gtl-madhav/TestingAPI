@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('entity_wing_relation', {
+module.exports = function (sequelize, DataTypes) {
+  const entity_wing_relation = sequelize.define('entity_wing_relation', {
     id: {
       type: DataTypes.BIGINT,
       allowNull: false,
@@ -85,4 +85,15 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'entity_wing_relation'
   });
+
+  entity_wing_relation.associate = function (models) {
+    // associations can be defined here
+    entity_wing_relation.belongsTo(models.identity, {
+      foreignKey: "identityId"
+    });
+    // entity_wing_relation.hasMany(models.entity_wing_relation, {
+    //   foreignKey: "identityId"
+    // });
+  }
+  return entity_wing_relation;
 };
